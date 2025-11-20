@@ -4,6 +4,7 @@ metadata:
   name: minio-pvc
   namespace: minio
 spec:
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
