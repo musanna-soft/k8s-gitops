@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<github-user>/k8s-gitops.git
+    repoURL: https://github.com/musanna-soft/k8s-gitops.git
     targetRevision: main
     path: apps/aspnet-sample
   destination:
