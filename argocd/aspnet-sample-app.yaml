@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aspnet-sample
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<github-user>/k8s-gitops.git
+    targetRevision: main
+    path: apps/aspnet-sample
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: aspnet-sample
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

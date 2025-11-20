@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: aspnet-sample
+  namespace: aspnet-sample
+spec:
+  selector:
+    app: aspnet-sample
+  ports:
+  - port: 80        # ichki port
+    targetPort: 9998 # container ichidagi port (Deploymentdagi containerPort)
+    protocol: TCP
+  type: ClusterIP

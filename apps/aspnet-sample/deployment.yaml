@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aspnet-sample
+  namespace: aspnet-sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: aspnet-sample
+  template:
+    metadata:
+      labels:
+        app: aspnet-sample
+    spec:
+      containers:
+      - name: aspnet-sample
+        image: ghcr.io/<user>/aspnet-sample:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        env:
+        - name: ASPNETCORE_ENVIRONMENT
+          value: "Production"
+        # agar connection stringlar bo'lsa, keyin secret/env qo‘shamiz
