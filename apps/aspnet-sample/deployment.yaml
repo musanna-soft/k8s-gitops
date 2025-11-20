@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: aspnet-sample
-        image: ghcr.io/<user>/aspnet-sample:latest
+        image: ghcr.io/musanna-soft/aspnet-sample:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 9998
