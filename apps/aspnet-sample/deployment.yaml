@@ -18,7 +18,7 @@ spec:
         image: ghcr.io/<user>/aspnet-sample:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 9998
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: "Production"
