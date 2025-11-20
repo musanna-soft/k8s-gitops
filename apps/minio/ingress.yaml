@@ -10,17 +10,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: minio-api.local
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: minio
-            port:
-              number: 9000
-  - host: minio-console.local
+  - host: minio.1kb.uz
     http:
       paths:
       - path: /
