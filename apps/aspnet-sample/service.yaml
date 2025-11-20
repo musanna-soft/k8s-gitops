@@ -8,6 +8,6 @@ spec:
     app: aspnet-sample
   ports:
   - port: 80        # ichki port
-    targetPort: 9998 # container ichidagi port (Deploymentdagi containerPort)
+    targetPort: 8080 # container ichidagi port (Deploymentdagi containerPort)
     protocol: TCP
   type: ClusterIP

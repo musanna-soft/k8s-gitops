@@ -15,10 +15,10 @@ spec:
     spec:
       containers:
       - name: aspnet-sample
-        image: ghcr.io/musanna-soft/aspnet-sample:latest
+        image: mcr.microsoft.com/dotnet/samples:aspnetapp
         imagePullPolicy: Always
         ports:
-        - containerPort: 9998
+        - containerPort: 8080
         env:
         - name: ASPNETCORE_ENVIRONMENT
           value: "Production"
